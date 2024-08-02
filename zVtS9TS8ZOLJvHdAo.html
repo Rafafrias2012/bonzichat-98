@@ -1,0 +1,44 @@
+<html><head><base href="https://bonziworld.org/">
+<title>BonziChat</title>
+<link rel="stylesheet" href="https://unpkg.com/98.css">
+<link type="text/css" rel="stylesheet" href="../style.scss">
+</head>
+<body>
+<div id="loginContainer">
+  <div id="loginWindow" class="window">
+    <div class="title-bar">
+      <div class="title-bar-text">BonziChat Login</div>
+    </div>
+    <div class="window-body">
+      <p>Enter your nickname and room ID to join:</p>
+      <div class="field-row">
+        <label for="login_nickname">Nickname:</label>
+        <input id="login_nickname" type="text">
+      </div>
+      <div class="field-row">
+        <label for="login_room">Room ID:</label>
+        <input id="login_room" type="text">
+      </div>
+      <div class="field-row">
+        <button id="loginButton">Join Chat</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="chatContainer">
+  <div id="bonziContainer"></div>
+  <div id="clippy"></div>
+  <div id="chatbar">
+    <input id="send_message" type="text" placeholder="Type your message...">
+    <button onclick="send()">Send</button>
+  </div>
+  <div id="roomInfo">Room: <span id="currentRoom"></span></div>
+  <div id="timezone"></div>
+  <button id="chatLogButton" class="window-button">Chat Log</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js"></script>
+<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+<script type="module" src="../script.ts"></script>
+</body></html>
